@@ -7,7 +7,7 @@
 \usepackage{ragged2e}
 \resetHeaderAndFooter
 
-\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}}
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill \location{#3 | #4}}
 
 \newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
 \descript{#2}\hspace*{\fill} \textbf{GPA:} 4.0}
@@ -32,10 +32,10 @@
 \newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
 \descript{#3 | #4}\\}
 
-% Parameters: courses
-\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
 
-\newcommand{\clubs}[1]{\textbf{Clubs:} #1}
+\newcommand{\courseWork}[1]{\vspace{0.5ex} \fontsize{9pt}{10pt} \textbf{Coursework:} #1}
+
+\newcommand{\clubs}[1]{\fontsize{9pt}{10pt} \textbf{Clubs:} #1 }
 
 
 \begin{document}
@@ -62,91 +62,87 @@
 \hrule
 
 \section{Education}
-\educationHeading{Georgia Institute of Technology}{Bachelors of Science in Computer Science}{Atlanta, GA}{Aug 2021-Dec 2024}
-
-
-\courseWork{Data Structure and Algorithms, Honors Discrete Math, Honors Linear Algebra, Computer Organization and Programming, Probability and Statistics, Applied Combinatorics}
-
-
-\clubs{GreyHat (CyberSec Club), dependently-typed (Programming Language Club)}
-\sectionsep
+    \educationHeading{GEORGIA INSTITUTE OF TECHNOLOGY}{Bachelors of Science in Computer Science}{Atlanta, GA}{Aug 2021-Dec 2024} \par
+    {\courseWork{\fontsize{9pt}{10pt} \customRalewayLight Data Structure and Algorithms, Honors Discrete Math}} \par
+    \clubs{\fontsize{9pt}{10pt} \customRalewayLight GreyHat (CyberSec Club), dependently-typed (Programming Language Club)}
+    \sectionsep
 
 \hrule
 
 \section{Work Experience}
+    \resumeHeading{Notitia}{Software Engineer}{Atlanta, GA}{Nov, 2021 - }
+        \begin{bullets}
+                \item Working with {Full-Stack} and {NLP} in building a MVP for a startup at Georgia Tech.
+                \item Built a {LDA model} in Python and worked with tuning {UMAP} parameters and implemented a clustering algorithm using {FAISS}. Worked on UI of a WordCloud using {React Flow}.
+                \item Optimized the Frontend, Backend and Flask server, cutting time in Frontend by {60\%} and {40\%} in MongoDB and Backend.
+        \end{bullets}
+    \sectionsep
 
-\resumeHeading{Notitia}{Software Engineer}{Atlanta, GA}{Nov, 2021 - }
-{\fontsize{10pt}{12pt} \customRalewayLight \begin{bullets}
-    \item Working with \textbf{Full-Stack} and \textbf{NLP} in building a MVP for a startup at Georgia Tech.
-    \item Built a \textbf{LDA model} in Python and worked with tuning \textbf{UMAP} parameters and implemented a clustering algorithm using \textbf{FAISS}. Worked on UI of a WordCloud using \textbf{React Flow}.
-    \item Optimized the Frontend, Backend and Flask server, cutting time in Frontend by \textbf{60\%} and \textbf{40\%} in MongoDB and Backend.
-\end{bullets}}
-\sectionsep
-
-\resumeHeading{National University of Singapore}{Student Researcher}{Singapore}{Apr 2019-Dec 2019}
-{\fontsize{10pt}{12pt} \customRalewayLight \begin{bullets}
-    \item Created a \textbf{Machine Learning} app to accurately estimate calories required by a person at a certain time to control food waste.
-    \item Researched and devised relations between \textbf{Ghrelin}, the hunger hormone, and calories required by accounting for factors like BMI, Diet Regime and Food Schedule. Used this data and relationship to train the machine learning model.
-    \item Followed \textbf{Design Thinking} principles in ideation and in designing the core principles of the idea. Worked intensively on User Experience and on Logo Design by creating prototypes on Adobe XD and photoshop. 
-    \item In the Final Competition, presented the app to the judges in Singapore and won the \textbf{Best Presentation Award.}
-\end{bullets}
-\par}
-\sectionsep
-
+    \resumeHeading{National University of Singapore}{Student Researcher}{Singapore}{Apr 2019-Dec 2019}
+        \begin{bullets}
+                \item Created a {Machine Learning} app to accurately estimate calories required by a person at a certain time to control food waste.
+                \item Researched and devised relations between {Ghrelin}, the hunger hormone, and calories required by accounting for factors like BMI, Diet Regime and Food Schedule. Used this data and relationship to train the machine learning model.
+                \item Followed {Design Thinking} principles in ideation and in designing the core principles of the idea. Worked intensively on User Experience and on Logo Design by creating prototypes on Adobe XD and photoshop.
+                \item In the Final Competition, presented the app to the judges in Singapore and won the {Best Presentation Award.}
+        \end{bullets}
+    \sectionsep
 
 \hrule
+
 \section{Projects}
-
-\projectHeading{DeusCL}{https://github.com/xinslu/deusCL}{Rust, Common Lisp}
-\fontsize{10pt}{12pt} \customRalewayLight A Memory-Efficient, Memory-Safe and Fast REPL that implements \textbf{Common Lisp} and is built using Rust. Implementing \textbf{Non-deterministic Finite Automata} for Parsing and building an \textbf{Abstract Syntax Tree} to represent code and expressions. Working on implementing a \textbf{Garbage Collector}. \par
-\sectionsep
-
-\projectHeading{Publixmon}{https://github.com/saisree27/publixmon}{MongoDB, Express.JS, React Native, Node.JS, Flask, }
-{\fontsize{10pt}{12pt} \customRalewayLight Using a deep neural network, OpenCV, React Native, Flask, Node, and Solidity (to create NFT smart contracts), Publixmon creates an engaging social experience for retail shoppers. Users' purchase history is turned into unique, collectibles that can be traded with other users to earn savings and turn local stores into communities. Project Won the First Place at the NCR API Challenge at HackGT 8. \par} 
-\sectionsep
-
-\projectHeading{Twitake}{https://twitake.netlify.app/}{ MongoDB, Express.js, ReactJS, Node.js, Python, NLP, TwitterAPI}
-{\fontsize{10pt}{12pt} \customRalewayLight A full-stack fake disaster tweet analysis tool that uses TwitterAPI to extract the text from the tweet link and data processing tools like lemmatization, tokenization, N-Grams, Stop Words, removal of punctuation, and a TD-IDF based Logistic Regression NLP model with a 81\% accuracy. \par} 
-\sectionsep
-
-\projectHeading{Mental Health Chat}{https://github.com/xinslu/mental-health-chat}{Redis, Docker, MongoDB, Express.JS, ReactJS, Node.JS, Socket.IO}
-{\fontsize{10pt}{12pt} \customRalewayLight A timed chat for people to share and talk about issues their having in relation with their mental health and help them overcome it. A message in the Redis database is set to expire in about 6 hours in order to encourage people to come out and discourage users calling each other out. Created a Dockerized App with a Redis Instance during development. \par} 
-\sectionsep
+    \projectHeading{DeusCL}{https://github.com/xinslu/deusCL}{Rust, Common Lisp}
+        \begin{justify}
+            \vspace{-1.5ex} \fontsize{10pt}{10pt} \customRalewayLight A Memory-Efficient, Memory-Safe and Fast REPL that implements {Common Lisp} and is built using Rust. Implementing a {Recursive Descent} Parser and building an {Abstract Syntax Tree} to represent code and expressions. Working on implementing a {Garbage Collector}. \par
+        \end{justify}
 
 
+    \projectHeading{Publixmon}{https://github.com/saisree27/publixmon}{MongoDB, Express.JS, React Native, Node.JS, Flask, }
+        \begin{justify}
+            \vspace{-1.5ex} \fontsize{10pt}{10pt} \customRalewayLight Using a deep neural network, OpenCV, React Native, Flask, Node, and Solidity (to create NFT smart contracts), Publixmon creates an engaging social experience for retail shoppers. Users' purchase history is turned into unique, collectibles that can be traded with other users to earn savings and turn local stores into communities. Project Won the First Place at the NCR API Challenge at HackGT 8. \par
+        \end{justify}
 
-% \projectHeading{CraveScale}{https://xd.adobe.com/view/4fe38c47-1f58-4a35-4fdb-46ef7a26ea66-39d2/grid/}{Python, Machine Learning}
-% {\fontsize{10pt}{12pt} \customRalewayLight An app to combat food waste that uses machine learning to make an accurate guess on the calories based on factors like BMI, Diet Regime and Food Schedule. These calories are then converted to the users favourite foods and the quantity so that the user can avoid ordering excess food and wasting.\par}
-% \sectionsep
-  
-% \projectHeading{Spam Filter}{https://github.com/xinslu/Spam-Classifier}{Python, NumPY,Scikit-Learn, Pandas, Wordcloud}
-% {\fontsize{10pt}{12pt} \customRalewayLight A spam classification TD-IDF Logistic Regression NLP model with a 95\% accuracy to be used in mail and SMS filtering. Visualized and analyzed data using WordCloud and worked on setting optimal parameters. \par} 
-% \sectionsep
+    \projectHeading{Twitake}{https://twitake.netlify.app/}{ MongoDB, Express.js, ReactJS, Node.js, Python, NLP, TwitterAPI}
+        \begin{justify}
+            \vspace{-1.5ex} \fontsize{10pt}{10pt} \customRalewayLight A full-stack fake disaster tweet analysis tool that uses TwitterAPI to extract the text from the tweet link and data processing tools like lemmatization, tokenization, N-Grams, Stop Words, removal of punctuation, and a TD-IDF based Logistic Regression NLP model with a 81\% accuracy. \par
+        \end{justify}
+
+    \projectHeading{Mental Health Chat}{https://github.com/xinslu/mental-health-chat}{Redis, Docker, MongoDB, Express.JS, ReactJS, Node.JS, Socket.IO}
+        \begin{justify}
+            \vspace{-1.5ex} \fontsize{10pt}{10pt} \customRalewayLight A timed chat for people to share and talk about issues their having in relation with their mental health and help them overcome it. A message in the Redis database is set to expire in about 6 hours in order to encourage people to come out and discourage users calling each other out. Created a Dockerized App with a Redis Instance during development. \par
+        \end{justify}
 
 
+    % \projectHeading{CraveScale}{https://xd.adobe.com/view/4fe38c47-1f58-4a35-4fdb-46ef7a26ea66-39d2/grid/}{Python, Machine Learning}
+    % {\fontsize{10pt}{12pt} \customRalewayLight An app to combat food waste that uses machine learning to make an accurate guess on the calories based on factors like BMI, Diet Regime and Food Schedule. These calories are then converted to the users favourite foods and the quantity so that the user can avoid ordering excess food and wasting.\par}
+    % \sectionsep
 
+    % \projectHeading{Spam Filter}{https://github.com/xinslu/Spam-Classifier}{Python, NumPY,Scikit-Learn, Pandas, Wordcloud}
+    % {\fontsize{10pt}{12pt} \customRalewayLight A spam classification TD-IDF Logistic Regression NLP model with a 95\% accuracy to be used in mail and SMS filtering. Visualized and analyzed data using WordCloud and worked on setting optimal parameters. \par}
+    % \sectionsep
 
-% \projectHeadingWithoutLink{iSight}{Robotics, Arduino, LEGO Mindstorms, Flutter}
-% A smart goggles for the blind using LEGO Mindstorms and Arduino and an app made using Flutter. The combination of proximity sensors on the rim of the goggles and Google Maps allow 360$^{\circ}$  mapping of the environment allowing the users to reach their destination by avoiding obstacles.\\
+    % \projectHeadingWithoutLink{iSight}{Robotics, Arduino, LEGO Mindstorms, Flutter}
+    % A smart goggles for the blind using LEGO Mindstorms and Arduino and an app made using Flutter. The combination of proximity sensors on the rim of the goggles and Google Maps allow 360$^{\circ}$  mapping of the environment allowing the users to reach their destination by avoiding obstacles.\\
 
 \hrule
 
 \section{Research}
-\researchHeading{Impact of Airplane Contrails \& Aviation pollution on Environment}
-{\fontsize{10pt}{12pt} \customRalewayLight
-A research project to build a device that can monitor the pollution levels in the atmosphere mapping out hot spots and then aiming at decreasing pollution at these sites by attaching a special filter to the airplanes which out decrease the thermal trapping capacity and the increase the efficiency of the fuel to decrease the greenhouse gasses released. \par}
-\sectionsep
+    \vspace{0.5ex}
+    \researchHeading{Impact of Airplane Contrails \& Aviation pollution on Environment}
+    {\vspace{1ex} \fontsize{10pt}{10pt} \customRalewayLight
+    A research project to build a device that can monitor the pollution levels in the atmosphere mapping out hot spots and then aiming at decreasing pollution at these sites by attaching a special filter to the airplanes which out decrease the thermal trapping capacity and the increase the efficiency of the fuel to decrease the greenhouse gasses released. \par}
+    \sectionsep
 
-\hrule
+    \hrule
 \section{Skills}
-\begin{skillList}
-    \singleItem{Languages: }{Python, JavaScript, HTML/CSS, Java, C, C++, C\#, Bash, Rust, AWK, Solidity}\\
-    \singleItem{Web \& App Development:}{ReactJS, Express.js, Node.js, Flutter, Ionic Framework, React Native, Socket.IO, Redux, ReactFlow, Web3.js}\\
-    \singleItem{Machine Learning: }{NumPy, Scikit-learn, Open AI Gym, Matplotlib, Pandas, Keras, NLTK, Gensim, FAISS, UMAP}\\
-    \singleItem{Technologies: }{Git, MATLAB, Docker, Postman, \LaTeX, SQL, MongoDB, Redis, Kubernetes, Blockchain}\\
-    % \singleItem{Skills:  }{Reinforcement, Supervised and Unsupervised Leearning, Object Oriented Programming, Data Structures \& Algorithms}\\
-    % \singleItem{Electronics: }{Arduino IDE, Raspberry Pi, LEGO Mindstorms}
-\end{skillList}
 
-
+    \begin{skillList}
+        \singleItem{Languages: }{\fontsize{9pt}{10pt} \customRalewayLight Python, JavaScript, HTML/CSS, Java, C, C++, C\#, Bash, Rust, AWK, Solidity}\\
+        \singleItem{Web \& App Development:}{\fontsize{9pt}{10pt} \customRalewayLight ReactJS, Express.js, Node.js, Flutter, Ionic Framework, React Native, Socket.IO, Redux, ReactFlow, Web3.js}\\
+        \singleItem{Machine Learning: }{\fontsize{9pt}{10pt} \customRalewayLight NumPy, Scikit-learn, Open AI Gym, Matplotlib, Pandas, Keras, NLTK, Gensim, FAISS, UMAP}\\
+        \singleItem{Technologies: }{\fontsize{9pt}{10pt} \customRalewayLight Git, MATLAB, Docker, Postman, \LaTeX, SQL, MongoDB, Redis, Kubernetes, Blockchain}\\
+        % \singleItem{Skills:  }{Reinforcement, Supervised and Unsupervised Leearning, Object Oriented Programming, Data Structures \& Algorithms}\\
+        % \singleItem{Electronics: }{Arduino IDE, Raspberry Pi, LEGO Mindstorms}
+    \end{skillList}
+    \sectionsep
+\hrule
 \end{document}
