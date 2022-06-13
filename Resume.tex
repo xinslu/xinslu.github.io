@@ -62,7 +62,7 @@
 \hrule
 
 \section{Education}
-    \educationHeading{GEORGIA INSTITUTE OF TECHNOLOGY}{Bachelors of Science in Computer Science}{Atlanta, GA}{Aug 2021-Dec 2024} \par
+    \educationHeading{GEORGIA INSTITUTE OF TECHNOLOGY}{Bachelors of Science in Computer Science}{Atlanta, GA}{Aug 2021 - May 2024} \par
     {\courseWork{\fontsize{10pt}{10pt} \customRalewayLight Data Structure and Algorithms, Honors Discrete Math}} \par
     \clubs{\fontsize{9pt}{10pt} \customRalewayLight GreyHat (CyberSec Club), dependently-typed (Programming Language Club)}
     \sectionsep
@@ -70,7 +70,16 @@
 \hrule
 
 \section{Work Experience}
-    \resumeHeading{Notitia}{Software Engineer}{Atlanta, GA}{Nov, 2021 - }
+    \resumeHeading{NCR Corporation}{Software Engineering Intern}{Atlanta, GA}{May 2022 - Aug 2022 }
+        \begin{bullets}
+            \item Worked in the Retail innovation team in building a micro-service in go to enable Cart service enabling shopping, checkout, transactions, taxes and payments.
+            \item Worked on making API endpoints, connecting to other layers within to make tax calls and get price details and built a caching system to store recent calls.
+            \item Worked on modelling data and made a CI/CD pipeline that performs a series of checks and publishes the Kubernetes Cluster onto Google Cloud Platform.
+            \item Working on fleshing out the API endpoints and making the Kubernetes Cluster.
+        \end{bullets}
+    \sectionsep
+
+    \resumeHeading{Notitia}{Software Engineer}{Atlanta, GA}{Nov 2021 - }
         \begin{bullets}
                 \item Working with {Full-Stack} and {NLP} in building a MVP for a startup at Georgia Tech.
                 \item Built a {LDA model} in Python and worked with tuning {UMAP} parameters and implemented a clustering algorithm using {FAISS}. Worked on UI of a WordCloud using {React Flow}.
@@ -78,22 +87,30 @@
         \end{bullets}
     \sectionsep
 
-    \resumeHeading{National University of Singapore}{Student Researcher}{Singapore}{Apr 2019-Dec 2019}
-        \begin{bullets}
-                \item Created a {Machine Learning} app to accurately estimate calories required by a person at a certain time to control food waste.
-                \item Researched and devised relations between {Ghrelin}, the hunger hormone, and calories required by accounting for factors like BMI, Diet Regime and Food Schedule. Used this data and relationship to train the machine learning model.
-                \item Followed {Design Thinking} principles in ideation and in designing the core principles of the idea. Worked intensively on User Experience and on Logo Design by creating prototypes on Adobe XD and Photoshop.
-                \item In the Final Competition, presented the app to the judges in Singapore and won the {Best Presentation Award.}
-        \end{bullets}
-    \sectionsep
+    % \resumeHeading{National University of Singapore}{Student Researcher}{Singapore}{Apr 2019-Dec 2019}
+    %     \begin{bullets}
+    %             \item Created a {Machine Learning} app to accurately estimate calories required by a person at a certain time to control food waste.
+    %             \item Researched and devised relations between {Ghrelin}, the hunger hormone, and calories required by accounting for factors like BMI, Diet Regime and Food Schedule. Used this data and relationship to train the machine learning model.
+    %             \item Followed {Design Thinking} principles in ideation and in designing the core principles of the idea. Worked intensively on User Experience and on Logo Design by creating prototypes on Adobe XD and Photoshop.
+    %             \item In the Final Competition, presented the app to the judges in Singapore and won the {Best Presentation Award.}
+    %     \end{bullets}
+    % \sectionsep
 
 \hrule
 
 \section{Projects}
 
+    \projectHeading{SpeechToCode}{https://github.com/xinslu/speechtocode}{Python, ReactJS, Node.js}
+        \begin{justify}
+            \vspace{-1.5ex} \fontsize{10pt}{10pt} \customRalewayLight Using AssemblyAI API, ReactJS and Node, SpeechToCode allows you to use your voice to write code in multiple languages to better help you understand and get started in learning a new language. Built a meta language parser that enables you to speak in a language close to English and creates a class based abstraction based on it, which is then easily translated to the language selected. Worked on designing the frontend and connecting the Parser to the frontend using a flask server. \par
+        \end{justify}
 
+    \projectHeading{DeusCL}{https://github.com/xinslu/deusCL}{Rust, Common Lisp}
+        \begin{justify}
+            \vspace{-1.5ex} \fontsize{10pt}{10pt} \customRalewayLight A memory-safe REPL built in Rust. Built a handwritten recursive descent parser and a visitor pattern dependent evaluator. Added a basic type inference, type checking and error handling system. Added dynamic evaluation of functional environment and parameters. Wrote a simple garbage collector and environment cleaner. Building a frontend in Web Assembly in Rust to enable users to use a web based simulation of REPL.\par
+        \end{justify}
 
-    \projectHeading{Publixmon}{https://github.com/saisree27/publixmon}{MongoDB, Express.JS, React Native, Node.JS, Flask, }
+    \projectHeading{Publixmon}{https://github.com/saisree27/publixmon}{MongoDB, Express.JS, React Native, Node.JS, Flask, Node.js }
         \begin{justify}
             \vspace{-1.5ex} \fontsize{10pt}{10pt} \customRalewayLight Using a deep neural network, OpenCV, React Native, Flask, Node, and Solidity (to create NFT smart contracts), Publixmon creates an engaging social experience for retail shoppers. Users' purchase history is turned into unique, collectibles that can be traded with other users to earn savings and turn local stores into communities. Project Won the First Place at the NCR API Challenge at HackGT 8. \par
         \end{justify}
@@ -103,25 +120,22 @@
             \vspace{-1.5ex} \fontsize{10pt}{10pt} \customRalewayLight Created a Res-Net Implementation of the Super Resolution GAN Paper (https://arxiv.org/pdf/1609.04802.pdf) for Single Image Super Resolution. I worked with tensorflow in creating a Residual Blocks and Skip Connections and used the VGG-19 Model to calculate the Content Loss of the Model. The model achieved perceptible improvements in image quality on the DIV2K dataset with a downscale factor 4. \par
         \end{justify}
 
-    \projectHeading{hack-a-lang}{https://github.com/dependently-typed/hack-a-lang}{Python}
-        \begin{justify}
-            \vspace{-1.5ex} \fontsize{10pt}{10pt} \customRalewayLight Worked with a team of 3 for the "hack-a-lang" event, to make the python implementation of the Lox Learning Language, complete with an implementation of dynamic functional environments, type checking, error handling, recursive descent parser and a visitor patter dependent evaluator. Also, spoke at the event about the evaluator, visitor patterns, environment creation and variable handing. Also, created exercise for the participants to work on to increase their knowledge. \par
-        \end{justify}
-
     \projectHeading{Mental Health Chat}{https://github.com/xinslu/mental-health-chat}{Redis, Docker, MongoDB, Express.JS, ReactJS, Node.JS, Socket.IO}
         \begin{justify}
             \vspace{-1.5ex} \fontsize{10pt}{10pt} \customRalewayLight A timed chat for people to share and talk about issues their having in relation with their mental health and help them overcome it. A message in the Redis database is set to expire in about 6 hours in order to encourage people to come out and discourage users calling each other out. Created a Dockerized App with a Redis Instance during development. \par
         \end{justify}
 
-    \projectHeading{DeusCL}{https://github.com/xinslu/deusCL}{Rust, Common Lisp}
+    \projectHeading{hack-a-lang}{https://github.com/dependently-typed/hack-a-lang}{Python}
         \begin{justify}
-            \vspace{-1.5ex} \fontsize{10pt}{10pt} \customRalewayLight A Memory-Efficient, Memory-Safe and Fast REPL that implements Common Lisp and is built using Rust. Implemented a Recursive Descent Parser and a visitor pattern system for the evaluator. Working on implementing a Garbage Collector. \par
+            \vspace{-1.5ex} \fontsize{10pt}{10pt} \customRalewayLight Worked with a team of 3 for the "hack-a-lang" event, to make the python implementation of the Lox Learning Language, complete with an implementation of dynamic functional environments, type checking, error handling, recursive descent parser and a visitor patter dependent evaluator. Also, spoke at the event about the evaluator, visitor patterns, environment creation and variable handing. Also, created exercise for the participants to work on to increase their knowledge. \par
         \end{justify}
 
-    \projectHeading{Twitake}{https://twitake.netlify.app/}{ MongoDB, Express.js, ReactJS, Node.js, Python, NLP, TwitterAPI}
-        \begin{justify}
-            \vspace{-1.5ex} \fontsize{10pt}{10pt} \customRalewayLight A full-stack fake disaster tweet analysis tool that uses TwitterAPI to extract the text from the tweet link and data processing tools like lemmatization, tokenization, N-Grams, Stop Words, removal of punctuation, and a TD-IDF based Logistic Regression NLP model with a 81\% accuracy. \par
-        \end{justify}
+
+
+    % \projectHeading{Twitake}{https://twitake.netlify.app/}{ MongoDB, Express.js, ReactJS, Node.js, Python, NLP, TwitterAPI}
+    %     \begin{justify}
+    %         \vspace{-1.5ex} \fontsize{10pt}{10pt} \customRalewayLight A full-stack fake disaster tweet analysis tool that uses TwitterAPI to extract the text from the tweet link and data processing tools like lemmatization, tokenization, N-Grams, Stop Words, removal of punctuation, and a TD-IDF based Logistic Regression NLP model with a 81\% accuracy. \par
+    %     \end{justify}
 
     % \projectHeading{CraveScale}{https://xd.adobe.com/view/4fe38c47-1f58-4a35-4fdb-46ef7a26ea66-39d2/grid/}{Python, Machine Learning}
     % {\fontsize{10pt}{12pt} \customRalewayLight An app to combat food waste that uses machine learning to make an accurate guess on the calories based on factors like BMI, Diet Regime and Food Schedule. These calories are then converted to the users favourite foods and the quantity so that the user can avoid ordering excess food and wasting.\par}
@@ -147,10 +161,10 @@
 \section{Skills}
 
     \begin{skillList}
-        \singleItem{Languages: }{\fontsize{9pt}{10pt} \customRalewayLight Python, JavaScript, HTML/CSS, Java, C, C++, C\#, Bash, Rust, AWK, Solidity}\\
+        \singleItem{Languages: }{\fontsize{9pt}{10pt} \customRalewayLight Python, Rust, Go, JavaScript, Java, C, C++, C\#, HTML/CSS, Bash, AWK, Solidity}\\
         \singleItem{Web \& App Development:}{\fontsize{9pt}{10pt} \customRalewayLight ReactJS, Express.js, Node.js, Flutter, Ionic Framework, React Native, Socket.IO, Redux, ReactFlow, Web3.js}\\
         \singleItem{Machine Learning: }{\fontsize{9pt}{10pt} \customRalewayLight NumPy, Scikit-learn, Open AI Gym, Matplotlib, Pandas, Keras, NLTK, Gensim, FAISS, UMAP}\\
-        \singleItem{Technologies: }{\fontsize{9pt}{10pt} \customRalewayLight Git, MATLAB, Docker, Postman, \LaTeX, SQL, MongoDB, Redis, Kubernetes, Blockchain}\\
+        \singleItem{Technologies: }{\fontsize{9pt}{10pt} \customRalewayLight Git, MATLAB, Docker, Postman, \LaTeX, SQL, MongoDB, Redis, Kubernetes}\\
         % \singleItem{Skills:  }{Reinforcement, Supervised and Unsupervised Leearning, Object Oriented Programming, Data Structures \& Algorithms}\\
         % \singleItem{Electronics: }{Arduino IDE, Raspberry Pi, LEGO Mindstorms}
     \end{skillList}
