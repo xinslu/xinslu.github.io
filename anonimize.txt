@@ -1,0 +1,8 @@
+:!rm -rf Resume_Anon.*
+:%s/Kinshuk/Bruh/g
+:%s/Phalke/Bruh/g
+:%s/xinslu/Bruh/g
+:%s/phalkekinshuk/bruh/g
+:%s/kinshukphalke/bruh/g
+:%s/+1-(404)-519-7018/bruh/g
+:%s/saisree27/bruh/g
