@@ -293,11 +293,9 @@ TSWLatexianTemp*
 # xwatermark package
 *.xwm
 
-*.sty
 
 LICENSE
 
-*.cls
 
 README.md
 .DS_Store
