@@ -26,12 +26,13 @@
 \RequirePackage{tabularx}
 % Used for the link symbol
 \defaultfontfeatures{
-    Path = /Users/kinshukphalke/Library/TinyTeX/texmf-dist/fonts/opentype/public/fontawesome/ }
-\usepackage{fontawesome}
-\RequirePackage{fontawesome}
+    Path = /usr/share/texlive/texmf-dist/tex/latex/fontawesome/ }
+% \usepackage{fontawesome}
+% \RequirePackage{fontawesome}
 % Set up font 
 \RequirePackage{lato-font}
 \RequirePackage{raleway-font}
+\usepackage{textcomp, gensymb}
 %--------------------------------------------------------------
 % Reformatting default sections
 % section
