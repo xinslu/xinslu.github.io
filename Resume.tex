@@ -1,176 +1,204 @@
-% !TeX TS-program = xelatex
-\documentclass[]{resume-openfont}
-\usepackage{fontspec}
-% \usepackage{fontawesome}
-\usepackage{gensymb}
-\usepackage[nopar]{lipsum}
-\usepackage[default,scale=0.95]{opensans} %% Alternatively
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
 \pagestyle{fancy}
-\usepackage{ragged2e}
-\resetHeaderAndFooter
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill \location{#3 | #4}}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
 
-\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
-\descript{#2}\hspace*{\fill} \textbf{GPA:} 4.0}
+\urlstyle{same}
 
-\newcommand{\projectHeading}[3]{\Project{#1}{#2}
-\descript{#3}\\}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-\newcommand{\projectHeadingWithoutLink}[2]{
-\runsubsection{%
-{\uppercase{#1}}
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
 }
-    \hfill
-    \descript{#2}\\
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
 }
 
-\newcommand{\research}[1]{
-\runsubsection{%
-{\uppercase{#1}}\\}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
 
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
 
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \emph{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
 
-\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
-\descript{#3 | #4}\\}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\courseWork}[1]{\vspace{0.5ex} \fontsize{9pt}{10pt} \textbf{Coursework:} #1}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-\newcommand{\clubs}[1]{\fontsize{9pt}{10pt} \textbf{Clubs:} #1 }
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
 
-    \newcommand{\yourName}{Kinshuk Phalke}
-    \newcommand{\yourWebsite}{kinshukphalke.com}
-    \newcommand{\yourWebsiteLink}{https://kinshukphalke.com}
-    \newcommand{\yourEmail}{phalkekinshuk@gatech.edu}
-    \newcommand{\yourPhone}{+1-(404)-519-7018}
-    \newcommand{\githubUserName}{xinslu}
-    \newcommand{\linkedInUserName}{kinshukphalke}
-
-    \begin{center}
-        \Huge  {\yourName} \\  \vspace{2pt}
-        \small \small{\yourPhone} $|$  \href{mailto:\yourEmail}{\yourEmail}  $|$
-        \href{https://www.linkedin.com/in/\linkedInUserName}{linkedIn/\linkedInUserName} \vspace{2pt} $|$ \vspace{2pt}
-        \href{https://github.com/\githubUserName}{github/\githubUserName} $|$
-        \vspace{2pt} 
-        \vspace{2pt} \href{\yourWebsiteLink}{\yourWebsite}
-
-        
-    \end{center}
-
-        \hrule
-
-        \section{Education}
-            \educationHeading{GEORGIA INSTITUTE OF TECHNOLOGY}{Bachelors of Science in Computer Science}{Atlanta, GA}{Aug 2021 - May 2024} \par
-            \begin{educationList}
-                \item[Coursework] Data Structure and Algorithms, Honors Discrete Math
-                \item[Clubs]{Executive Board - dependently-typed, GreyHat}
-            \end{educationList}
-        \sectionsep
-
-    \hrule
-
-    \section{Work Experience}
-        \resumeHeading{NCR Corporation}{Software Engineering Intern}{Atlanta, GA}{May 2022 - Aug 2022 }
-            \begin{bullets}
-                \item Worked in the Retail innovation team in building a micro-service in Go to enable Cart service enabling shopping, checkout, transactions, taxes and payments.
-                \item Made API endpoints, Integrated with other APIs for additional services like taxes, prices, location and item attributes. 
-                \item Modelled data and created a CI/CD pipeline that performs a series of checks and publishes the Kubernetes Cluster onto Google Cloud Platform.
-                \item Wrote a Bash Script with 12 presets to help change environment variables for different stages in production, enable simple deployments, creating and updating internal CA Certificates and managing kubectl pods and deployments. 
-            \end{bullets}
-        \sectionsep
-
-        \resumeHeading{Notitia}{Software Engineer}{Atlanta, GA}{Nov 2021 - Present}
-            \begin{bullets}
-                    \item Working as full stack engineer in building a MVP for a startup at Georgia Tech.
-                    \item Built a LDA model in Python and worked with tuning UMAP parameters and implemented a clustering algorithm using {FAISS}. Worked on UI of a WordCloud using {React Flow}.
-                    \item Optimized the front-end by 60\% and back-end by 40\%.
-            \end{bullets}
-        \sectionsep
-
-        % \resumeHeading{National University of Singapore}{Student Researcher}{Singapore}{Apr 2019-Dec 2019}
-        %     \begin{bullets}
-        %             \item Created a {Machine Learning} app to accurately estimate calories required by a person at a certain time to control food waste.
-        %             \item Researched and devised relations between {Ghrelin}, the hunger hormone, and calories required by accounting for factors like BMI, Diet Regime and Food Schedule. Used this data and relationship to train the machine learning model.
-        %             \item Followed {Design Thinking} principles in ideation and in designing the core principles of the idea. Worked intensively on User Experience and on Logo Design by creating prototypes on Adobe XD and Photoshop.
-        %             \item In the Final Competition, presented the app to the judges in Singapore and won the {Best Presentation Award.}
-        %     \end{bullets}
-        % \sectionsep
-
-    \hrule
-
-    \section{Projects}
-
-        \projectHeadingWithoutLink{SpeechToCode}{Python, ReactJS, Node.js}
-            \begin{justify}
-                   \vspace{-0.15cm} A turing complete ReactJS Application, allowing you to make code from spoken sentences. Built a meta language parser enabling you to speak english to create fully functional JavaScript, Python or Java code. Worked on designing the frontend and connecting the parser to the frontend using a flask server. \par
-            \end{justify}
-
-        \projectHeadingWithoutLink{DeusCL}{Rust, Common Lisp, Yew Framework}
-            \begin{justify}
-                   \vspace{-0.15cm} A memory-safe REPL built in Rust. Built a handwritten recursive descent parser and a visitor pattern dependent evaluator. Added a basic type inference, type checking and error handling system. Added dynamic evaluation of functional environment and parameters. Wrote a simple garbage collector and environment cleaner. Building a frontend in Yew Framework in Rust to enable users to use a web based simulation of REPL.\par
-            \end{justify}
-
-        \projectHeadingWithoutLink{Publixmon}{MongoDB, Express.JS, React Native, Node.JS, Flask, Node.js }
-            \begin{justify}
-                  \vspace{-0.15cm} Publixmon is an app to boost retail engagement. Built a smart contract allowing users to mint NFTs based on Order History of each user. Integrated with the NCR BSP layer to pull order details, catalog and inventory details. Built and tested mining NFTs on the Ganache Blockchain and built a node.js server to facilitate blockchain actions.   Project Won the First Place at the NCR API Challenge at HackGT 8. \par
-            \end{justify}
-
-        \projectHeadingWithoutLink{Mental Health Chat}{Redis, Docker, MongoDB, Express.JS, ReactJS, Node.JS, Socket.IO}
-            \begin{justify}
-                \vspace{-0.15cm} A timed chat for users to talk about mental health issues. Built a login platform using firebase and OAuth, utilized redis cache inorder to create cache to store the messages for 6 hours before deletion, served requests throught a REST Node.js server, utilized Socket.IO to create pubsub connections between clients and utilized Redux as a centralized theme store per user. \par
-            \end{justify}
-
-        \projectHeadingWithoutLink{hack-a-lang}{Python}
-            \begin{justify}
-                    \vspace{-0.15cm} Worked with a team of 3 for the "hack-a-lang" event, to make the python implementation of the Lox Learning Language, complete with an implementation of dynamic functional environments, type checking, error handling, recursive descent parser and a visitor patter dependent evaluator. Also, spoke at the event about the evaluator, visitor patterns, environment creation and variable handing. Also, created exercise for the participants to work on to increase their knowledge. \par
-            \end{justify}
-
-        \projectHeadingWithoutLink{Enhance}{Python, Tensorflow, Keras}
-            \begin{justify}
-                   \vspace{-0.15cm}Created a Res-Net Implementation of the Super Resolution GAN Paper for Single Image Super Resolution. I worked with tensorflow in creating a Residual Blocks and Skip Connections and used the VGG-19 Model to calculate the Content Loss of the Model. The model achieved perceptible improvements in image quality on the DIV2K dataset with a downscale factor 4. \par
-            \end{justify}
+\begin{center}
+    {\Huge \scshape Kinshuk Phalke} \\ \vspace{5pt}
+    \small \raisebox{-0.1\height}\faPhone\ (404)-519-7018 ~ \href{mailto:phalkekinshuk@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{phalkekinshuk@gmail.com}} ~ 
+    \href{https://linkedin.com/in/kinshukphalke/}{\raisebox{-0.2\height}\faLinkedin\ \underline{kinshukphalke}}  ~
+    \href{https://github.com/xinslu}{\raisebox{-0.2\height}\faGithub\ \underline{xinslu}} ~
+    \href{https://kinshukphalke.com/}{\raisebox{-0.2\height}\faLink\ \underline{kinshukphalke.com}}
+    \vspace{-8pt}
+\end{center}
 
 
-        % \projectHeading{Twitake}{https://twitake.netlify.app/}{ MongoDB, Express.js, ReactJS, Node.js, Python, NLP, TwitterAPI}
-        %     \begin{justify}
-        %            A full-stack fake disaster tweet analysis tool that uses TwitterAPI to extract the text from the tweet link and data processing tools like lemmatization, tokenization, N-Grams, Stop Words, removal of punctuation, and a TD-IDF based Logistic Regression NLP model with a 81\% accuracy. \par
-        %     \end{justify}
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Georgia Institute of Technology}{August 2021 - May 2024}
+      {Bachelor of Science in Computer Science, GPA: 4.0}{Atlanta, Georgia}
+    \resumeItemListStart
+    \resumeItem{\textbf{Concentration: } System and Architecture, Intelligence}
+    \resumeItem{\textbf{Relevant Coursework: } Algorithms Honors, Discrete Mathematics Honors, Linear Algebra Honors, Operating Systems, Systems and Network, Machine Learning, Artificial Intelligence, Statistics and Applications}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  \vspace{-16pt}
 
-        % \projectHeading{CraveScale}{https://xd.adobe.com/view/4fe38c47-1f58-4a35-4fdb-46ef7a26ea66-39d2/grid/}{Python, Machine Learning}
-        % {\fontsize{10pt}{12pt}  An app to combat food waste that uses machine learning to make an accurate guess on the calories based on factors like BMI, Diet Regime and Food Schedule. These calories are then converted to the users favourite foods and the quantity so that the user can avoid ordering excess food and wasting.\par}
-        % \sectionsep
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Georgia Tech High Performance Architecture Lab}{Jan 2023 -- Present}
+      {Undergraduate Research Assistant}{Atlanta, Georgia}
+      \resumeItemListStart
+        \resumeItem{Working on In-Storage GPU scheduling strategies to maximize memory capacity and performance in GPUs.}
+      \resumeItemListEnd
 
-        % \projectHeading{Spam Filter}{https://github.com/xinslu/Spam-Classifier}{Python, NumPY,Scikit-Learn, Pandas, Wordcloud}
-        % {\fontsize{10pt}{12pt}  A spam classification TD-IDF Logistic Regression NLP model with a 95\% accuracy to be used in mail and SMS filtering. Visualized and analyzed data using WordCloud and worked on setting optimal parameters. \par}
-        % \sectionsep
+    \resumeSubheading
+      {NCR Corporation}{May 2021 -- August 2021}
+      {Software Engineer Intern}{Atlanta, Georgia}
+      \resumeItemListStart
+        \resumeItem{Created a shopping cart micro service in Go Fiber deployed onto GCP to enable carting on PoS devices and websites.}
+        \resumeItem{Wrote core logic in CRUD operations of cart and service integration into NCR's BSP layer for related taxes, prices, store locations, promotions, returns and item attributes information and operations}
+        \resumeItem{Wrote YAML deployment files for the Kubernetes cluster, adding scalability and multi-tenancy.}
+        \resumeItem{Created a CI/CD pipeline to run testing suite, verify and publish deployments, publish artifacts onto GCP.}
+        \resumeItem{Wrote a Bash script with 12 presets to change environment variables for different stages in production, run the Kubernetes cluster, create and update internal CA certificates and manage kubectl pods and deployments.}
+      \resumeItemListEnd
 
-        % \projectHeadingWithoutLink{iSight}{Robotics, Arduino, LEGO Mindstorms, Flutter}
-        % A smart goggles for the blind using LEGO Mindstorms and Arduino and an app made using Flutter. The combination of proximity sensors on the rim of the goggles and Google Maps allow 360$^{\circ}$  mapping of the environment allowing the users to reach their destination by avoiding obstacles.\\
+    \resumeSubheading
+      {Notitia}{November 2021 -- Present}
+      {Software Engineer}{Atlanta, Georgia}
+      \resumeItemListStart
+        \resumeItem{Built a LDA model in Python, tuned UMAP parameters to achieve a 80\% accuracy, implemented a clustering algorithm using FAISS, worked on UI of the WordCloud using React Flow.}
+        \resumeItem{Optimized the frontend graph rendering by 60\% and backend machine learning algorithm by 40\%.}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
 
-    \hrule
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{SpeechToCode}}{Python, ReactJS, Node.js}
+          \resumeItemListStart
+            \resumeItem{Built a meta language parser in Python enabling spoken English to create functional JavaScript, Python or Java code.}
+            \resumeItem{Used a visitor pattern, lexical scoping system, text based type inference system to create language output.}
+            \resumeItem{Worked on integration with the speech to text machine learning flask server and designing the frontend in ReactJS.}
+          \resumeItemListEnd
+          \vspace{-16pt}
+      \resumeProjectHeading
+          {\textbf{DeusCL}}{Rust, Common Lisp, Yew Framework}
+          \resumeItemListStart
+            \resumeItem{Built a memory-safe REPL in Rust using a handwritten recursive descent parser and a visitor pattern evaluator.}
+            \resumeItem{Added a basic type inference, type checking, error handling system, lexically scoped garbage collector and a dynamic evaluation of functional environment and parameters. }
+            \resumeItem{Built a frontend in Yew Framework in Rust to enable users to use a web based simulation of REPL.}
+          \resumeItemListEnd 
+          \vspace{-16pt}
+          \resumeProjectHeading
+          {\textbf{Publixmon}}{MongoDB, Express.JS, React Native, Node.JS, Flask, Node.js}
+          \resumeItemListStart
+            \resumeItem{Built a Web3 mobile app in React Native allowing users to play NFT trading game to boost retail engagement.}
+            \resumeItem{Integrated with the NCR BSP layer for order, catalog, inventory details and generate an NFT based on user history.}
+            \resumeItem{Built and tested mining NFTs on the Ganache Blockchain and built a node.js server to facilitate blockchain actions.}
+            \resumeItem{Project won the first place at the NCR API Challenge at HackGT 8.}
+          \resumeItemListEnd 
+          \vspace{-16pt}
+          \resumeProjectHeading
+          {\textbf{Enhance}}{Python, Tensorflow, Keras}
+          \resumeItemListStart
+            \resumeItem{Created a Res-Net Implementation of the Super Resolution GAN Paper for Super Resolution in Tensorflow.}
+            \resumeItem{Created residual blocks and skip connection, Used the VGG-19 model to calculate the content loss of the model. }
+            \resumeItem{Achieved perceptible improvements in image quality on the DIV2K dataset with a downscale factor 4.}
+          \resumeItemListEnd 
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
 
-    % \section{Research}
-    %     \vspace{0.5ex}
-    %     \researchHeading{Impact of Airplane Contrails \& Aviation pollution on Environment}
-    %     {\vspace{1ex}  
-    %     A research project to build a device that can monitor the pollution levels in the atmosphere mapping out hot spots and then aiming at decreasing pollution at these sites by attaching a special filter to the airplanes which out decrease the thermal trapping capacity and the increase the efficiency of the fuel to decrease the greenhouse gasses released. \par}
-    %     \sectionsep
 
-    %     \hrule
-    \section{Skills}
-        \begin{skillsListIndent}
-            \item[Languages] {\fontsize{9pt}{10pt}  Python, Rust, Go, JavaScript, Java, C, C++, C\#, , Solidity}\\
-            \item[Full-Stack]{\fontsize{9pt}{10pt}  ReactJS, Express.js, Node.js, Flutter, Ionic, React Native, Socket.IO, Redux, Web3.js, Yew, Tauri}\\
-            \item[Machine Learning]{\fontsize{9pt}{10pt}  NumPy, Scikit-learn, Open AI Gym, Matplotlib, Pandas, Keras}\\
-            \item[Technologies]{\fontsize{9pt}{10pt}  Git, Docker, Postman, \LaTeX, SQL, MongoDB, Redis, Kubernetes, Google Cloud Platform, AWS}\\
-            % \singleItem{Skills:  }{Reinforcement, Supervised and Unsupervised Leearning, Object Oriented Programming, Data Structures \& Algorithms}\\
-            % \singleItem{Electronics: }{Arduino IDE, Raspberry Pi, LEGO Mindstorms}
-        \end{skillsListIndent}
-        \sectionsep
-    \hrule
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Rust, Go, JavaScript, Java, C, C++, C\#, TypeScript, Solidity} \\
+     \textbf{Frameworks}{: ReactJS, Next.JS, NestJS, Astro, Express.js, Node.js, Flutter, React Native,  Redux, Web3.js, Yew, Tauri} \\
+     \textbf{Machine Learning}{: Tensorflow, PyTorch, NumPy, Scikit-learn, Open AI Gym, Matplotlib, Pandas, Keras, NLTK} \\
+     \textbf{Technologies/Frameworks}{: Git, Linux, Docker, Postman, \LaTeX, SQL, MongoDB, Redis, Kubernetes, Google Cloud Platform, AWS } \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
 
 \end{document}
