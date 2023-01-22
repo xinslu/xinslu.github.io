@@ -1,9 +1,9 @@
 :!rm -rf Resume_Anon.*
-:%s/Kinshuk/Bruh/g
-:%s/Phalke/Bruh/g
-:%s/xinslu/Bruh/g
-:%s/phalkekinshuk/bruh/g
-:%s/kinshukphalke/bruh/g
-:%s/+1-(404)-519-7018/bruh/g
+:%s/Kinshuk/John/g
+:%s/Phalke/Doe/g
+:%s/xinslu/github/g
+:%s/phalkekinshuk/email/g
+:%s/kinshukphalke/website/g
+:%s/+1-(404)-519-7018/phonenumber/g
 :w Resume_Anon.tex
 :q!
